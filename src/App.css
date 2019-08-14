@@ -1,33 +1,66 @@
 .App {
-  text-align: center;
-}
+  height: 450px;
+  width: 450px;
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.cell {
+  height: calc(100% / 3 - 2px);
+  width: calc(100% / 3 - 2px);
+  border: 1px solid black;
+
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+  font-size: 4rem;
 }
 
-.App-link {
-  color: #61dafb;
+span {
+  font-size: 8vw;
+  text-align: center;
+
+  display: block;
+  width: 8vw;
+
+ position: fixed;
+
+  animation: pink-sparkle infinite linear forwards 5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes pink-sparkle {
+  0% {
+    top: 0vh;
+    color: fuchsia;
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    top: 25vh;
+    color: darkorchid;
+    transform: rotateY(100deg) rotateX(170deg) rotateZ(540deg);
+  }
+
+  50% {
+    top: 50vh;
+    color: deeppink;
+    transform: rotateY(180deg) rotateX(270deg) rotateZ(720deg);
+  }
+  75% {
+    top: 75vh;
+    color: darkturquoise;
+    transform: rotateY(250deg) rotateX(500deg) rotateZ(900deg);
+  }
+  87.5% {
+    top: 87.5vh;
+    color: red;
+    transform: rotateY(300deg) rotateX(600deg) rotateZ(800deg);
+  }
+  100% {
+    top: 100vh;
+    color: fuchsia;
+    transform: rotateY(360deg) rotateX(720deg) rotateZ(1080deg);
   }
 }
